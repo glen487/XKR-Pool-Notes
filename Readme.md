@@ -97,7 +97,7 @@ sudo su - kryptokrona
 
 * Visit Github and download latest binaries.
 
-https://github.com/kryptokrona/kryptokrona/releases/d
+https://github.com/kryptokrona/kryptokrona/releases/
 
 Currently 1.0.2:
 * Download and unpack
