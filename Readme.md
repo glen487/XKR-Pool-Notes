@@ -258,7 +258,7 @@ poolAddress": "SEKRe.....",
 ⚠ 1 warning
 This is IMPORTANT because this is also used for /admin.html access to the pool.
 
-Nope: "wallet" password not used if you run the wallet rpc with "--rpc-legacy-security"
+Note: "wallet" password not used if you run the wallet rpc with "--rpc-legacy-security"
 
 Make sure payment looks something like this. 
 ```json
