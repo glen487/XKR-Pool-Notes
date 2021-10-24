@@ -273,7 +273,7 @@ Make sure payment looks something like this.
                 "minerPayFee": true,
                 "minPayment": 100000,
                 "maxPayment": null,
-                "maxTransactionAmount": 0,
+                "maxTransactionAmount": 500000000,
                 "denomination": 100000
         },
 ```
