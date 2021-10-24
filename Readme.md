@@ -337,6 +337,35 @@ ctrl+a to exist the screen session
 
 exit the pool user session
 
+
+Use the sample website that comes with the pool under "website".
+In this guide webroot is pointing to "/var/www/html/pool"
+
+Update the "config.js" in webroot to point to your API and add XKR explorer
+
+Sample:
+
+```js
+var api = "https://poolhostname.domain.tld/api/";
+let parentCoin = ""
+
+var email = "support@poolhost.com";
+var telegram = "https://t.me/YourPool";
+var discord = "https://discordapp.com/invite/YourPool";
+var facebook = "https://www.facebook.com/<YourPoolFacebook>";
+
+var marketCurrencies = ["{symbol}-BTC", "{symbol}-LTC", "{symbol}-DOGE", "{symbol}-USDT", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
+
+var blockchainExplorer = "https://explorer.kryptokrona.se/?hash={id}#blockchain_block";
+var transactionExplorer = "https://explorer.kryptokrona.se/?hash={id}#blockchain_transaction";
+
+var blockchainExplorerMerged = "";
+var transactionExplorerMerged = "";
+
+var themeCss = "themes/default.css";
+var defaultLang = 'en';
+```
+
 ## Install you favorite webserver
 
 If you want to support TLS on pool ports, copy your files to filename cert.pem, privkey.pem (no password) and chain.pem (or change in pool config.json) to the pool directory to replace the sample files. Remember to do this also after renewal. Follow the latest cert-bot if you need a certificate.
