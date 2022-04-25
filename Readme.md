@@ -339,6 +339,12 @@ Also add:
         }
 }
 ```
+Or simply download packages.json file for the pool from this repo. Make sure it's in the pool source directory.
+```
+wget https://raw.githubusercontent.com/glen487/XKR-Pool-Notes/main/packages.json
+npm update
+npm audit fix --force
+```
 Important run "npm update" after this change.
 Also "npm audit fix --force"
 
