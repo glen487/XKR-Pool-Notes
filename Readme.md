@@ -296,8 +296,15 @@ node init.js -config=config.json
 chmod +x start-pool.bash
 ```
 If you get the problem with the dateformat.js when starting pool.
-Edit the "package.json" and change changing the "dateformat": "*" to "dateformat": "4.5.1" in package.json, and run npm update again to fixed the issue 
-```diff
+Edit the "package.json" and change changing the "dateformat": "*" to "dateformat": "4.5.1" in package.json, and run "npm update" again to fixed the issue.
+also change the git url to include "git+https://" like below.
+
+Also add:
+* "bufferutil": "^4.0.5",
+* "utf-8-validate": "^5.0.7"
+* "nodemailer": "4.0.1",
+
+```
 {
         "name": "cryptonote-nodejs-pool",
         "version": "1.4.0",
@@ -314,13 +321,12 @@ Edit the "package.json" and change changing the "dateformat": "*" to "dateformat
                 "bignum": "*",
                 "bufferutil": "^4.0.5",
                 "cli-color": "*",
-                "cryptoforknote-util": "git://github.com/MoneroOcean/node-cryptoforknote-util.git",
-                "cryptonight-hashing": "git://github.com/MoneroOcean/node-cryptonight-hashing.git",
-       -        "dateformat": "*",
-       +        "dateformat": "4.5.1",
+                "cryptoforknote-util": "git+https://github.com/MoneroOcean/node-cryptoforknote-util.git",
+                "cryptonight-hashing": "git+https://github.com/MoneroOcean/node-cryptonight-hashing.git",
+                "dateformat": "4.5.1",
                 "mailgun.js": "*",
                 "node-telegram-bot-api": "*",
-                "nodemailer": "^6.7.0",
+                "nodemailer": "4.0.1",
                 "nodemailer-sendmail-transport": "*",
                 "redis": "*",
                 "socket.io": "^2.1.1",
@@ -333,10 +339,13 @@ Edit the "package.json" and change changing the "dateformat": "*" to "dateformat
         }
 }
 ```
+Important run "npm update" after this change.
+Also "npm audit fix --force"
+
 ctrl+a to exist the screen session
 
-exit the pool user session
 
+exit the pool user session
 
 Use the sample website that comes with the pool under "website".
 In this guide webroot is pointing to "/var/www/html/pool"
